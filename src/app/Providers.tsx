@@ -1,11 +1,5 @@
 "use client";
 
-import {
-  HeroUIProvider,
-  Navbar,
-  NavbarContent,
-  NavbarItem,
-} from "@heroui/react";
 import Link from "next/link";
 import { useRef } from "react";
 
@@ -23,12 +17,11 @@ export function Providers({ children }: { children: React.ReactNode }) {
   };
 
   return (
-    <HeroUIProvider>
-      <Navbar
-        position="static"
+    <div>
+      <div
         className="navbar bg-base-100 shadow-sm justify-between pl-4 pr-4 sticky top-0 z-2"
       >
-        <NavbarContent className="justify-between w-full">
+        <div className="justify-between w-full">
           <div className="flex gap-4 items-center">
             <div className="avatar">
               <div className="w-12 rounded-xl">
@@ -41,14 +34,14 @@ export function Providers({ children }: { children: React.ReactNode }) {
               </div>
             </div>
             <div className="hidden sm:block">
-              <NavbarItem className="btn btn-ghost text-xl">
+              <div className="btn btn-ghost text-xl">
                 <Link href="/">Blog</Link>
-              </NavbarItem>
+              </div>
             </div>
             <div className="hidden sm:block">
-              <NavbarItem className="btn btn-ghost text-xl">
+              <div className="btn btn-ghost text-xl">
                 <Link href="/timeline">Timeline</Link>
-              </NavbarItem>
+              </div>
             </div>
             {/* <div className="hidden sm:block">
               <NavbarItem className="btn btn-ghost text-xl">
@@ -56,7 +49,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
               </NavbarItem>
             </div> */}
           </div>
-          <NavbarItem className="sm:hidden">
+          <div className="sm:hidden">
             <label
               htmlFor="my-drawer"
               className="btn btn-circle swap swap-rotate"
@@ -90,9 +83,9 @@ export function Providers({ children }: { children: React.ReactNode }) {
                 <polygon points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49" />
               </svg>
             </label>
-          </NavbarItem>
-        </NavbarContent>
-      </Navbar>
+          </div>
+        </div>
+      </div>
 
       <div className="drawer z-2">
         <input type="checkbox" className="drawer-toggle" ref={drawerRef} />
@@ -134,6 +127,6 @@ export function Providers({ children }: { children: React.ReactNode }) {
       >
         {children}
       </main>
-    </HeroUIProvider>
+    </div>
   );
 }

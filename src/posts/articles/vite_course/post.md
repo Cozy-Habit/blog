@@ -8,6 +8,8 @@ descr: My confusions, key insights, and takeaways from the Vite course by Steve 
 
 Thanks to the GitHub Educational Student Pack I was able to claim a free 6 months trial for FrontendMasters.
 
+## Table of contents
+
 - [How to set up Vite](#how-to-set-up-vite)
 - [How Vite bundles (a-)synchronous JavaScript modules](#how-vite-bundles-a-synchronous-javascript-modules)
 - [How Vite bundles stylesheets (modules)](#how-vite-bundles-stylesheets-modules)

@@ -1,13 +1,13 @@
-import { Feed, Footer, Hero } from "@/components";
+import { Feed, Footer, Hero } from '@/components';
 
 const Page = () => {
-  return (
-    <div className="prose mt-1">
-      <Hero />
-      <Feed />
-      <Footer />
-    </div>
-  );
+    return (
+        <div className="prose mt-1 ">
+            <Hero />
+            <Feed />
+            <Footer />
+        </div>
+    );
 };
 
 export default Page;

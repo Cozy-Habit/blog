@@ -3,3 +3,80 @@
   themes: light --default, dark --prefersdark, silk;
 }
 @plugin "@tailwindcss/typography";
+
+@keyframes page-arrive {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes feed-item-arrive {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+main > .prose {
+  animation: page-arrive 650ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+.motion-item {
+  animation: feed-item-arrive 520ms cubic-bezier(0.2, 0.7, 0.2, 1) backwards;
+  transition: transform 220ms ease;
+}
+
+.motion-item:nth-child(1) { animation-delay: 70ms; }
+.motion-item:nth-child(2) { animation-delay: 120ms; }
+.motion-item:nth-child(3) { animation-delay: 170ms; }
+.motion-item:nth-child(4) { animation-delay: 220ms; }
+.motion-item:nth-child(5) { animation-delay: 270ms; }
+.motion-item:nth-child(n + 6) { animation-delay: 320ms; }
+
+.motion-item:hover {
+  transform: translateY(-3px);
+}
+
+.motion-image {
+  transition: transform 350ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.motion-item:hover .motion-image {
+  transform: scale(1.035);
+}
+
+.btn:not(:disabled) {
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.btn:not(:disabled):hover {
+  transform: translateY(-2px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .motion-item:hover,
+  .motion-item:hover .motion-image,
+  .btn:not(:disabled):hover {
+    transform: none;
+  }
+}

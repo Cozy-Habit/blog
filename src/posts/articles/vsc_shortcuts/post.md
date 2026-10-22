@@ -22,6 +22,7 @@ Here's a cheat sheet for different VS Code shortcuts I've collected over time (o
 |`Option+Up/Down Arrow`| Move code lines around. |
 |`Option+Right/Left Arrow`| Move cursor between words. |
 |`Ctrl+Up/Down Arrow`| Scroll up/down |
+| `Ctrl+D` | If the cursor is on a specific word it will look for the recurring word in the file and select it as well. |
 
 
 ## Interact with Code Editor

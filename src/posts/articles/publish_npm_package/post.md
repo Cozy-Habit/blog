@@ -6,6 +6,8 @@ descr: Publishing npm packages to npm registry and GitHub Packages Registry. Dif
 
 # Different ways to publish npm packages
 
+## Table of contents
+
 - [NPM Registry](#npm-registry)
 - [GitHub Package Registry](#github-package-registry)
 - [Speeding up the workflow](#speeding-up-the-workflow)

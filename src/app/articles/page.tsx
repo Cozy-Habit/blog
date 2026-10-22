@@ -1,16 +1,29 @@
+'use client';
+
 import { ArticleFeed } from '@/components';
-import { getArticles } from '@/utils';
+import useArticlesStore from '@/stores/useArticlesStore';
+import { useEffect } from 'react';
 
 const Page = () => {
-    const articles = getArticles();
-    console.log(articles);
+    const articles = useArticlesStore((s) => s.articles);
+    const isLoadingArticles = useArticlesStore((s) => s.isLoadingArticles);
+    const fetchArticles = useArticlesStore((s) => s.fetchArticles);
 
-    return (
-        <div className="p-8 prose">
-            <h1>All Articles</h1>
-            <ArticleFeed articles={articles} />
-        </div>
-    );
+    useEffect(() => {
+        fetchArticles();
+    }, []);
+
+    if (isLoadingArticles) return <p>Loading data...</p>;
+
+    if (articles)
+        return (
+            <div className="p-8 prose">
+                <h1>All Articles</h1>
+                <ArticleFeed articles={articles} />
+            </div>
+        );
+
+    return <p>Couldn't load articles</p>;
 };
 
 export default Page;

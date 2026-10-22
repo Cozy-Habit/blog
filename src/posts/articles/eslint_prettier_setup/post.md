@@ -6,6 +6,8 @@ descr: Difference between ESLint and Prettier, how both work under the hood, set
 
 # Figuring out how to set up ESLint and Prettier (... and some more)
 
+## Table of contents
+
 - [Difference between ESLint and Prettier](#difference-between-eslint-and-prettier)
 - [How ESLint works under the hood](#how-eslint-works-under-the-hood)
 - [Setting up ESLint](#setting-up-eslint)

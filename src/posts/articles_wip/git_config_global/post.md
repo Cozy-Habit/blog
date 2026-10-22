@@ -16,6 +16,7 @@ draft: true
 |---|----|
 |`git config --list --show-origin`|lists all information of each config file, including the file's file system location|
 |`git config --global alias.<alias> <command-to-be-aliased>`|add an alias for a git command. <br><br> Example: `git config --global alias.co "checkout"` and then you can run `git co` instead of `git checkout` to checkout a branch. <br><br> A new section will be added to your config: <br> `[alias] co = checkout`|
+|`git config --global credential.helper store`|...|
 
 
 ## Git helpful aliases

@@ -1,6 +1,3 @@
-import { getAllPosts, PostData, getArticles, getProjects } from "./getAllPosts";
-import { getPostContent } from "./getPost";
-import getEstimatedReadingTime from "./getEstimatedReadingTime";
+import { calculateReadingTime } from './calculateReadingTime';
 
-export { getAllPosts, getPostContent, getEstimatedReadingTime, getArticles, getProjects };
-export type { PostData };
+export { calculateReadingTime };

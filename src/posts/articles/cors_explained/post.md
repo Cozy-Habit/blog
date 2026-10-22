@@ -13,6 +13,8 @@ Access to fetch at 'https://example.com/data' from origin 'http://localhost:3000
 No 'Access-Control-Allow-Origin' header is present on the requested resource.
 ```
 
+## Table of contents
+
 - [What is CORS?](#what-is-cors)
 - [Why the CORS error is shown](#why-the-cors-error-is-shown)
 - [How to fix the CORS error](#how-to-fix-the-cors-error)
