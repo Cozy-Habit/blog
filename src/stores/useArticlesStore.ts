@@ -29,7 +29,7 @@ const useArticlesStore = create<ArticlesStore>()((set, get) => ({
                 "characterCount": length(pt::text(body)),
                 "wordCount": round(length(pt::text(body)) / 5),
                 "readingTime": round((length(pt::text(body)) / 5) / 180)
-            }
+            } | order(publishedAt desc)
             `;
         const articles = await client.fetch(REQUEST);
         set({ articles });
